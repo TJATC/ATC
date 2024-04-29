@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Hero/>
       
-      <Nav place={-1}/>
+      <Nav place={-1} color={'Light'}/>
       
       
     </div>

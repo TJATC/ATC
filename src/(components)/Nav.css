@@ -8,7 +8,6 @@
 }
 
 .Nav .Logo{
-    color: var(--pale);
     font-size: 1.3em;
     font-weight: 600;
 }
@@ -20,7 +19,6 @@
     text-transform: uppercase;
     margin-left: auto;
     font-weight: 600;
-    color: var(--pale);
     position: relative;
     
 }
@@ -29,10 +27,16 @@
 }
 
 .Nav .Navlinks >*:hover{
-    color: var(--white);
     font-weight: 700;
 }
 
+.Light{
+    color: var(--white);
+}
+
+.Dark{
+    color: var(--dark);
+}
 
 @media (max-width: 800px) {
     .Nav .Navlinks{
