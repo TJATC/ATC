@@ -12,6 +12,11 @@ module.exports = {
     extend: {
       colors: {
         "dark-color": "var(--dark)",
+        "white-color": "var(--white)",
+        "pale-color": "var(--pale)",
+        "light-color": "var(--light)",
+        "med-color": "var(--med)",
+        "black-color": "var(--black)"
     },
   },
 },
