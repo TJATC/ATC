@@ -2,11 +2,10 @@
 import Link from 'next/link'
 import Hamburger from './Hamburger';
 import './Nav.css'
-import { Montserrat, Jersey_15 } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import React, {useState, useEffect, useRef} from 'react';
 
 const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','600', '700']});
-const jersey = Jersey_15({subsets: ["latin"], weight:['400']});
 
 
 interface BoxProps{
@@ -42,7 +41,7 @@ export default function Nav(props: BoxProps){
 
             <div className={['Navlinks', LinksClass].join(' ')}>
                 <Link href="/user/signup" style={props.place===3 ? { borderBottom: "5px solid #453F78"} : {}}>Sign Up</Link>
-                <Link href="/user/login" style={props.place===4 ? {borderBottom: "5px solid #453F78"} : {}}>Sign Up</Link>
+                <Link href="/user/login" style={props.place===4 ? {borderBottom: "5px solid #453F78"} : {}}>Login</Link>
                 <Link href="/projects" style={props.place===5 ? { borderBottom: "5px solid #453F78"} : {}}>Sign Up</Link>
             </div>
         </div>
