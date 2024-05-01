@@ -10,8 +10,9 @@ export async function POST(request: NextRequest){
     try {
         // Grab data from body 
         const reqBody = await request.json();
-        const {username, email, password} = reqBody;
-
+        let {username, email, password} = reqBody;
+        email = email.toLowerCase();
+        username = username.toLowerCase();
         console.log(reqBody);
 
         const user = await User.findOne({email});
