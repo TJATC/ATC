@@ -1,0 +1,69 @@
+.Box{
+    position: relative;
+    margin: 2em;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-width: 27vw;
+    }
+.Box .bgimg{
+    z-index: -1000;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1),
+
+    0 0 20px rgba(0,0,0,0.1),
+    
+    0 0 30px rgba(0,0,0,0.1),
+    
+    0 0 30px rgba(0,0,0,0.1);
+    
+    
+}
+
+.Box .radialBg{
+    z-index: -100;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    
+    background-image:  radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.20) 1%, rgba(0, 0, 0, 0.20) 98%);
+    transition:radial-gradient 20s ease-in;
+
+}
+
+.Box .Info{
+    color: var(--dark);
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--dark);
+    background-color: var(--pale);
+    text-align: center;
+    opacity: 70%;
+    margin: 0em 2em;
+  }
+
+.radialBg:hover{
+    background-image:  radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.17) 1%, rgba(0, 0, 0, 0.17) 98%);
+
+
+}
+
+.Box:hover > .bgimg{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.Box:hover > .Info{
+    opacity: 90;
+}
+
+@media (max-width: 800px) {
+    .Box{
+        min-width: 50vw;
+        }
+    .Box .Info{
+        opacity: 100%;
+
+        }
+  }

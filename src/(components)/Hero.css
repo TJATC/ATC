@@ -6,7 +6,7 @@
     
 }
 
-.radialBg{
+.Hero .radialBg{
     z-index: -100;
     position: absolute;
     height: 100%;
@@ -28,7 +28,7 @@
     
 }
 
-.Info{
+.Hero .Info{
     position: absolute;
     top: 45%;
     left: 20%;
@@ -36,11 +36,11 @@
     
   }
 
-.Info h1{
+.Hero .Info h1{
     font-size: 5em;
 }
 
-.Info .Buttons{
+.Hero .Info .Buttons{
     display: flex;
     color: var(--dark);
     font-weight: 600;
