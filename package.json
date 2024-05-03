@@ -16,6 +16,7 @@
     "@mui/material": "^5.15.15",
     "axios": "^1.6.8",
     "bcryptjs": "^2.4.3",
+    "googleapis": "^136.0.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.2",
     "next": "14.2.2",
