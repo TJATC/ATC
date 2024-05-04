@@ -1,7 +1,7 @@
 .Hero{
-    position: absolute;
-    width: 100%;
-    height: 90vh;
+    position: relative;
+    width: 100vw;
+    height: 70vh;
     top:0;
     
 }
@@ -11,7 +11,6 @@
     position: absolute;
     height: 100%;
     width:100%;
-    
     background:  radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.26) 1%, rgba(0, 0, 0, 0.47) 98%);
 
 }

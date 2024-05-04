@@ -39,7 +39,7 @@
     color: var(--dark);
     background-color: var(--pale);
     text-align: center;
-    opacity: 70%;
+    opacity: 85%;
     margin: 0em 2em;
   }
 
@@ -58,9 +58,19 @@
     opacity: 90;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .Box{
-        min-width: 50vw;
+        min-width: 33vw;
+        }
+    .Box .Info{
+        opacity: 100%;
+
+        }
+  }
+
+@media (max-width: 850px) {
+    .Box{
+        min-width: 75vw;
         }
     .Box .Info{
         opacity: 100%;
