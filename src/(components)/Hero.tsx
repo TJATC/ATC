@@ -17,7 +17,7 @@ export default function Hero(props: HeroProps){
                 <h3>Latest Game</h3>
                 <h1>Winter Spinner</h1>
                 <div  className="Buttons">
-                    <button >Learn More</button><button>Contact Us</button>
+                    <button onClick={event =>  window.location.href='/about_us'}>Learn More</button><button>Contact Us</button>
 
                 </div>
              </div>
