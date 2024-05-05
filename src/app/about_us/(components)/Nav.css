@@ -6,17 +6,13 @@
     display:flex;
     margin: 2em 7em;
     
-}   
+}
 
 .Nav .Logo{
     font-size: 1.3em;
     font-weight: 600;
-    
 }
 
-.Nav .Logo a{
-    color: var(--dark);
-}
 .Nav .Navlinks{
     display: flex;
     justify-content: space-between;
@@ -29,7 +25,6 @@
 }
 .Nav .Navlinks >*{
     vertical-align: bottom;
-    color: var(--dark);
 }
 
 .Nav .Navlinks >*:hover{
@@ -47,7 +42,6 @@
 @media (max-width: 800px) {
     .Nav .Navlinks{
         display: none;
-
     }
 
     .Nav .Logo{

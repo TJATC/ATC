@@ -1,0 +1,56 @@
+.Main{
+    position: relative;
+    height: 70vh;
+    top:0;
+    
+}
+
+.Main .radialBg{
+    z-index: -100;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background:  radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.52) 1%, rgba(0, 0, 0, 0.50) 98%);
+
+}
+    
+.Main .bgimg{
+    z-index: -1000;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1),
+
+    0 0 40px rgba(0,0,0,0.1),
+    
+    0 0 60px rgba(0,0,0,0.1),
+    
+    0 0 80px rgba(0,0,0,0.1);
+    
+}
+
+.Main .Info{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    margin: auto;
+    width:50vw;
+  }
+
+.Main .Info h1{
+    font-size: 5em;
+    font-weight: 700;
+}
+.Main .Info h3{
+    margin: .5em;
+}
+.Main .Info .Buttons{
+    display: flex;
+    color: var(--dark);
+    font-weight: 600;
+    gap: 1em;
+    
+}
+
+.Info .Buttons>*:hover{
+    -webkit-transition: all ease-in-out 200ms;
+    box-shadow:  2px 2px 6px var(--light), -2px -2px 4px var(--light); 
+
+}

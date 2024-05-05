@@ -1,0 +1,54 @@
+.Hero{
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    top:0;
+    
+}
+
+.Hero .radialBg{
+    z-index: -100;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background:  radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.26) 1%, rgba(0, 0, 0, 0.47) 98%);
+
+}
+    
+.Hero .bgimg{
+    z-index: -1000;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1),
+
+    0 0 40px rgba(0,0,0,0.1),
+    
+    0 0 60px rgba(0,0,0,0.1),
+    
+    0 0 80px rgba(0,0,0,0.1);
+    
+}
+
+.Hero .Info{
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    margin: auto;
+    
+  }
+
+.Hero .Info h1{
+    font-size: 5em;
+}
+
+.Hero .Info .Buttons{
+    display: flex;
+    color: var(--dark);
+    font-weight: 600;
+    gap: 1em;
+    
+}
+
+.Info .Buttons>*:hover{
+    -webkit-transition: all ease-in-out 200ms;
+    box-shadow:  2px 2px 6px var(--light), -2px -2px 4px var(--light); 
+
+}

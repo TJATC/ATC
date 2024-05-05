@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Amith Dude",
+      "role": "Co-pres"
+    },
+    {
+      "name": "Leah Person",
+      "role": "/blog"
+    },
+    {
+      "name": "Shab Man",
+      "role": "/portfolio"
+    },
+    {
+      "name": "Chloe Slays",
+      "role": "/publications"
+    },
+    {
+      "name": "Danielle",
+      "role": "/publications"
+    },
+    {
+        "name": "Nicomie",
+        "role": "/publications"
+    },
+    {
+        "name": "Rohan Pulls",
+        "role": "/publications"
+    }
+  ]

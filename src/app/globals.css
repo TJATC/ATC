@@ -10,8 +10,8 @@
   /* Define custom properties */
   --white: #EEEEEE;
   --pale: #E1F7F5;
-  --light: #76ABAE;
-  --med: #1679AB;
+  --light: #94d5d8;
+  --med: #2c84b0;
   --dark: #31363F;
   --black: #222831;
 
@@ -31,6 +31,17 @@ a, button /* &c... */ {
   cursor: pointer
 }
 
+.a_norm{
+  color: var(--light);
+  font-weight: 600;
+  border-bottom: 3px solid var(--med);
+  transition:all ease-in-out .2s;
+}
+
+.a_norm:hover{
+  background-color: var(--med);
+  
+}
 
 
 button{

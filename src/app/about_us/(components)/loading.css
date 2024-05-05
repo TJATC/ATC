@@ -1,0 +1,13 @@
+
+
+.loading h1{
+    font-size: 3em;
+    color: #1B1A55;
+    letter-spacing: .05em;
+    max-width: fit-content;
+    position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;  
+}
