@@ -1,16 +1,16 @@
-.Box{
+.Box2{
     position: relative;
     margin: 2em;
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    min-width: 25vw;
+    min-width: 70vw;
     }
-.Box .bgimg{
+.Box2 .bgimg{
     z-index: -1000;
     filter: blur(4px);
     -webkit-filter: blur(4px);
-    box-shadow: 0 0 20px rgba(0,0,0,0.1),
+    Box-shadow: 0 0 20px rgba(0,0,0,0.1),
 
     0 0 20px rgba(0,0,0,0.1),
     
@@ -21,7 +21,7 @@
     
 }
 
-.Box .radialBg{
+.Box2 .radialBg{
     z-index: -100;
     position: absolute;
     height: 100%;
@@ -32,14 +32,13 @@
 
 }
 
-.Box .Info{
+.Box2 .Info{
     color: var(--dark);
     font-size: 1.5em;
     font-weight: 500;
     color: var(--dark);
     background-color: var(--pale);
     text-align: center;
-    opacity: 85%;
     margin: 0em 2em;
   }
 
@@ -49,30 +48,30 @@
 
 }
 
-.Box:hover > .bgimg{
+.Box2:hover > .bgimg{
     filter: blur(2px);
     -webkit-filter: blur(2px);
 }
 
-.Box:hover > .Info{
+.Box2:hover > .Info{
     opacity: 90;
 }
 
 @media (max-width: 1200px) {
-    .Box{
-        min-width: 33vw;
+    .Box2{
+        min-width: 75vw;
         }
-    .Box .Info{
+    .Box2 .Info{
         opacity: 100%;
 
         }
   }
 
 @media (max-width: 850px) {
-    .Box{
-        min-width: 75vw;
+    .Box2{
+        min-width: 80vw;
         }
-    .Box .Info{
+    .Box2 .Info{
         opacity: 100%;
 
         }

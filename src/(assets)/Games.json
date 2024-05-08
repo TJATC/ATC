@@ -1,0 +1,82 @@
+[
+    {
+      "name": "Spooky Spinner",
+      "link": "https://tj-atc.github.io/ATC/games/spookyspinner/", 
+      "image":"/game_covers/0.png"
+    },
+    {
+      "name": "Winter Spinner",
+      "link": "https://tj-atc.github.io/ATC/games/winterspinner/", 
+      "image":"/game_covers/1.png"
+    },
+    {
+      "name": "Red Light Green Light",
+      "link": "https://tj-atc.github.io/ATC/games/light.html", 
+      "image":"/game_covers/2.jpg"
+    },
+    {
+      "name": "Sentence Builder",
+      "link": "https://tj-atc.github.io/ATC/games/sentence.html", 
+      "image":"/game_covers/3.jpg"
+    },
+    {
+      "name": "Fill in the Blank",
+      "link": "https://tj-atc.github.io/ATC/games/blank.html", 
+      "image":"/game_covers/4.jpg"
+    },
+    {
+        "name": "Shopping",
+        "link": "https://tj-atc.github.io/ATC/games/shop.html", 
+        "image":"/game_covers/5.jpg"
+    },
+    {
+        "name": "Tic-Tac-Toe",
+        "link": "https://tj-atc.github.io/ATC/games/tictactoe.html", 
+        "image":"/game_covers/6.jpg"
+    },
+    {
+      "name": "School Questionnaire",
+      "link": "https://docs.google.com/presentation/d/1J8CkxK5soBhoNvzkWWhUnIRaSvBD3vBswPmTvmfLINU/edit?usp=sharing", 
+      "image":"/game_covers/7.png"
+    },
+    {
+      "name": "Feelings",
+      "link": "https://tj-atc.github.io/ATC/games/feelings.html", 
+      "image":"/game_covers/8.png"
+    },
+    {
+      "name": "Fortunes",
+      "link": "https://tj-atc.github.io/ATC/games/fortunes.html", 
+      "image":"/game_covers/9.jpg"
+    },
+    {
+      "name": "Going to the Beach",
+      "link": "https://docs.google.com/presentation/d/1tta_faQRcvDIsRczwmDSSwbrGmZewJ7Tx73vJiIx2Bs/edit#slide=id.p", 
+      "image":"/game_covers/10.jpg"
+    },
+    {
+      "name": "Happy Meter",
+      "link": "https://tj-atc.github.io/ATC/games/happymeter.html", 
+      "image":"/game_covers/11.png"
+    },
+    {
+      "name": "Thanksgiving Meals",
+      "link": "https://tj-atc.github.io/ATC/games/thanksgiving.html", 
+      "image":"/game_covers/12.png"
+    },
+    {
+      "name": "Winter Meter",
+      "link": "https://tj-atc.github.io/ATC/games/wintermeter.html", 
+      "image":"/game_covers/13.png"
+    },
+    {
+      "name": "First Day Game!",
+      "link": "https://docs.google.com/presentation/d/1aF0qgRYaJ42qrQTdfs21TvJtw3vqXVStSVN2DbBtVas/edit?usp=sharing", 
+      "image":"/game_covers/14.jpg"
+    },
+    {
+      "name": "Snow Day",
+      "link": "https://tj-atc.github.io/ATC/games/snowday.html", 
+      "image":"/game_covers/15.jpeg"
+    }
+  ]

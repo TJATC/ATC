@@ -15,7 +15,7 @@ export default function Main(props: MainProps){
             <Image src={props.source} alt="bg image" fill ={true} style={{objectFit:"cover"}} className="bgimg"/>
             <div className="Info">
                 <h1>Powered By Love</h1>
-                <h3 className="font-medium">We are <a className="a_norm" href="https://tjhsst.fcps.edu/">Thomas Jefferson High School's</a> Assistive Technology Club (TJ ATC). A club that works with elementary students with verbal and motor disabilities in Fairfax County Public Schools.
+                <h3 className={["font-medium", " text-[.8em] md:text-[1em]"].join(" ")}>We are <a className="a_norm" href="https://tjhsst.fcps.edu/">Thomas Jefferson High School's</a> Assistive Technology Club (TJ ATC). A club that works with elementary students with verbal and motor disabilities in Fairfax County Public Schools.
                  In the midst of a competition focused world, we hope to provide connection between us and other students. 
                 </h3>
                 

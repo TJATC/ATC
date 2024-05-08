@@ -10,7 +10,7 @@ export default function about(){
             <Approach/>
             <Heading num="2" blurb="Leadership"/>
             <Leadership/>
-            <Heading num="3" blurb="Awards"/>
+            <Heading num="3" blurb="History"/>
         </div>
     )
 }
