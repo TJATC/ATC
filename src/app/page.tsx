@@ -38,9 +38,11 @@ export default function Home() {
           }
       </Slider>
       <Heading num="1" blurb="About Us"/>
-      <ImgText source="/1.jpg" width={30}/>
+      <ImgText source="/main_page/1.jpg" width={30}/>
       <Heading num="2" blurb="Games"/>
+      <ImgText source="/main_page/2.jpg" width={50}/>
       <Heading num="3" blurb="Books"/>
+      <ImgText source="/main_page/3.jpg" width={70}/>
       <Heading num="4" blurb="Account"/>
     </div>
   );
