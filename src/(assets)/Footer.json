@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Contact Us",
+        "link": "mailto:tjatclub@gmail.com"
+    },
+    {
+        "name": "Github",
+        "link": "https://github.com/TJ-ATC"
+    },
+    {
+        "name": "Assistive Technology Services",
+        "link": "https://www.fcps.edu/academics/academic-overview/special-education-instruction/assistive-technology-services-ats"
+    },
+    {
+        "name": "Learn Assistive Tech",
+        "link": "https://www.beaver-works-assistive-tech.mit.edu/create-challenge/create-course"
+    },
+    {
+        "name": "More Information",
+        "link": "https://fairfax.studentpeaceawards.org/tjhsst-atc/"
+    }
+]

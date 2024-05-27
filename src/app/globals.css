@@ -53,3 +53,16 @@ button{
 h1, h3{
   color: var(--white);
 }
+
+
+body{
+  margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+  display: block;
+  flex: 1 0 auto;
+}

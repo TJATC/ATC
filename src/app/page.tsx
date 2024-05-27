@@ -5,6 +5,7 @@ import React from 'react'
 import Slider from "react-slick";
 import Heading from '@/(components)/Heading'
 import ImgText from '@/(components)/ImgText'
+import Box from "@/(components)/Box3";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import Slider from 'react-slick'
@@ -27,7 +28,7 @@ export default function Home() {
 
   return (
     
-    <div>
+    <div className="my-[3em]">
       <Nav  place={-1} color={'Dark'}/>
   
       <Slider {...settings}>
@@ -37,13 +38,15 @@ export default function Home() {
           ))
           }
       </Slider>
-      <Heading num="1" blurb="About Us"/>
-      <ImgText source="/main_page/1.jpg" width={30}/>
-      <Heading num="2" blurb="Games"/>
-      <ImgText source="/main_page/2.jpg" width={50}/>
-      <Heading num="3" blurb="Books"/>
-      <ImgText source="/main_page/3.jpg" width={70}/>
-      <Heading num="4" blurb="Account"/>
+      <Heading link="/about_us" num="1" blurb="About Us"/>
+      <Box link="/about_us" name="Learn more about us" image="/main_page/1.jpg"/>
+      <Heading link="/games"  num="2" blurb="Games"/>
+      <Box link="/games" name="Play games and practice using NuVoice" image="/main_page/2.jpg" />
+      <Heading link="/books"  num="3" blurb="Books"/>
+      <Box link="/books" name="Here lies books with unique questions" image="/main_page/3.jpg" />
+      <Heading link="/signup"  num="4" blurb="Account"/>
+      <Box link="/signup" name="Create an Account and record your progress" image="/main_page/4.jpg" />
+
     </div>
   );
 }

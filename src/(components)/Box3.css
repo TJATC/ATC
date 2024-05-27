@@ -1,0 +1,45 @@
+.Box3{
+    position: relative;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-width: 70vw;
+    min-height: 33vh;
+    }
+
+.Box3 .bgimg{
+    z-index: -1000;
+    width: 100%;
+    Box-shadow: 0 0 20px rgba(0,0,0,0.1),
+
+    0 0 20px rgba(0,0,0,0.1),
+    
+    0 0 30px rgba(0,0,0,0.1),
+    
+    0 0 30px rgba(0,0,0,0.1);
+    
+    
+}
+
+.Box3 .radialBg{
+    z-index: -100;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    
+    background-image:  radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.333) 1%, rgba(0, 0, 0, 0.333) 98%);
+
+}
+
+
+
+
+.Box3 .Info{
+    color: var(--white);
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    margin: 0em 2em;
+  }
+
+
