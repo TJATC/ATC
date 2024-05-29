@@ -48,7 +48,7 @@ export default function Login(){
             <h1 className="py-6  text-dark-color text-7xl">
                 {loading ? "Processing. . ." : "Login"}
             </h1>
-            <Link href="/user/login" className="mb-4">
+            <Link href="/user/signup" className="mb-4">
                     <p>Don't have an account? <span className="font-bold text-med-color ml-2 cursor-pointer underline">Sign up for an account</span></p>
             </Link>
             <div className="space-y-6">
@@ -57,7 +57,7 @@ export default function Login(){
                     id="email" 
                     value={user.email} 
                     onChange={(e)=> setUser({...user, email: e.target.value})} 
-                    placeholder="Email . . ." 
+                    placeholder="Email" 
                     autoComplete="off"
                 />
                 <input className="w-[80vw] text-state-800 p-2 border border-gray-300 rounded-lg mb-2 focus:outline-none focus:border-dark-color" 
@@ -65,7 +65,7 @@ export default function Login(){
                     id="password" 
                     value={user.password} 
                     onChange={(e)=> setUser({...user, password: e.target.value})} 
-                    placeholder="Password . . ." 
+                    placeholder="Password" 
                     autoComplete="off"
                 />
                 {buttonDisabled ? <></>: <button className="p-3" onClick={onLogin}>Login</button> }

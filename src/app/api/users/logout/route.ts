@@ -11,6 +11,8 @@ export async function GET(){
             expires: new Date(0)
         })
 
+        return userLogoutResponse
+
     } catch (error:any) {
         return NextResponse.json({
             error: error.message

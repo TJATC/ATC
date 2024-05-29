@@ -4,7 +4,8 @@ import Hamburger from './Hamburger';
 import './Nav.css'
 import { Montserrat } from "next/font/google";
 import React, {useState, useEffect, useRef} from 'react';
-import { getJwtToken} from "../auth"
+import { useRouter } from 'next/router';
+import axios from 'axios';
 
 const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','600', '700']});
 
@@ -18,7 +19,24 @@ export default function Nav(props: BoxProps){
 
     const [LinksClass, setLinksClass] = useState("")
     const [LoggedIn, setLoggedIn] = useState(false)
-    const jwtToken = getJwtToken();
+
+    useEffect(()=>{
+        // const jwtToken = page()
+        async function fetchData(){
+            try {
+                const response = await axios.post('/api/access', {token: 'token'})
+                console.log(response)
+                const data = response.data
+                if(!Object.keys(data).length) setLoggedIn(false)
+                else setLoggedIn(true)
+                
+            } catch (error:any) {
+                console.log(error.message)
+            }
+        }
+        fetchData();
+    })
+    
 
     const toggleit = () =>{
         if (LinksClass === ""){
@@ -29,9 +47,7 @@ export default function Nav(props: BoxProps){
         }
     }
 
-    if(!jwtToken) setLoggedIn(false)
-    else setLoggedIn(true)
-
+    
     
     return(
         <div className={['Nav', montserrat.className, props.color].join(' ')}>
@@ -50,7 +66,7 @@ export default function Nav(props: BoxProps){
             <div className={['Navlinks', LinksClass].join(' ')}>
                 {!LoggedIn ? <Link href="/user/signup" style={props.place===3 ? { borderBottom: "5px solid #453F78"} : {}}>Sign Up</Link> : <></>}
                 {!LoggedIn ? <Link href="/user/login" style={props.place===4 ? {borderBottom: "5px solid #453F78"} : {}}>Login</Link>: <></>}
-                {LoggedIn ? <Link href="/projects" style={props.place===5 ? { borderBottom: "5px solid #453F78"} : {}}>Logout</Link> : <></>}
+                {LoggedIn ? <Link href="/user/profile" style={props.place===5 ? { borderBottom: "5px solid #453F78"} : {}}>Profile</Link> : <></>}
             </div>
         </div>
     )
