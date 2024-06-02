@@ -33,3 +33,34 @@
     overflow: hidden;
 }
 
+input{
+    outline-style: solid;
+    border-radius: .3em;
+    outline-width: .05em;
+    outline-color: #ADB6C4;
+}
+
+input:focus{
+    outline-width: .15em;
+    outline-color: #294C60;
+}
+
+textarea{
+    outline-style: solid;
+    border-radius: .3em;
+    outline-width: .05em;
+    outline-color: #ADB6C4;
+}
+
+textarea:focus{
+    outline-width: .15em;
+    outline-color: #294C60;
+}
+
+#name{
+    padding: .1em .4em;
+}
+
+#bio{
+    padding: .1em .4em 1.4em;
+}

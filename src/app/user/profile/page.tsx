@@ -3,13 +3,15 @@
 import axios from 'axios'
 import {useRouter} from 'next/navigation';
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import UserProfile from './UserProfile';
+import ProfileEdit from './profileEdit';
+import { onSave } from './profileEdit';
 import "./profile.css"
 
 export default function Profile(){
     const router = useRouter()
     const [user, setUser] = useState({username:"", name: "", bio:"", image: "", streak:""})
+    const [toggleUser, setToggleUser] = useState(true)
 
     const onSignOut = async ()=>{
         try {
@@ -19,7 +21,10 @@ export default function Profile(){
             console.log(error.message)
         }
     }
-
+    const switchToggle = () => {
+        if(toggleUser) setToggleUser(false)
+        else setToggleUser(true)
+    }
     useEffect(()=>{
         async function fetchData(){
             try {
@@ -48,13 +53,24 @@ export default function Profile(){
     return(
         <div className={['m-5 flex', "Profile"].join(" ")}>
             <div className={['flex justify-start', "UserData"].join(" ")}><p>Place holder</p></div>
+            {toggleUser ? 
             <div className={['ProfileSection', 'flex flex-col content-center items-center jusitfy-end'].join(" ")}>
                 <UserProfile  username = {user.username} name = {user.name} bio = {user.bio} image = {user.image}/>
                 <div className='flex gap-2 w-[75%]'>
-                    <button className="text-center grow">Edit Profile</button>
+                    <button className="text-center grow" onClick={switchToggle}>Edit Profile</button>
                     <button className="grow-0 w-fit]" onClick={onSignOut}>Log Out</button>
                 </div>
             </div>
+            : 
+            <div className='flex flex-col content-center items-center jusitfy-end'>
+                <ProfileEdit  username = {user.username} name = {user.name} bio = {user.bio} image = {user.image}/>
+                <div className='flex gap-2 w-[75%] mt-2'>
+                    <button className="text-center grow bg-slate-50" onClick={switchToggle}>Cancel</button>       
+                    <button className="grow-0 w-fit bg-slate-50" onClick={onSignOut}>Log Out</button>
+                </div>
+            </div>
+            
+            }
         </div>
     )
 }
