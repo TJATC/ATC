@@ -8,7 +8,6 @@ export async function POST(request: NextRequest){
         const cookieStore = cookies()
         const token:any = cookieStore.get(req.token)
         const tokenData = jwt.verify(token['value'], process.env.TOKEN_SECRET!);
-        console.log("token", tokenData)
         return NextResponse.json(tokenData, {status:200})
     } catch (error) {
         
