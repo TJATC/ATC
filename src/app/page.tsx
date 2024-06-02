@@ -44,8 +44,8 @@ export default function Home() {
       <Box link="/games" name="Play games and practice using NuVoice" image="/main_page/2.jpg" />
       <Heading link="/books"  num="3" blurb="Books"/>
       <Box link="/books" name="Here lies books with unique questions" image="/main_page/3.jpg" />
-      <Heading link="/signup"  num="4" blurb="Account"/>
-      <Box link="/signup" name="Create an Account and record your progress" image="/main_page/4.jpg" />
+      <Heading link="/user/signup"  num="4" blurb="Account"/>
+      <Box link="/user/signup" name="Create an Account and record your progress" image="/main_page/4.jpg" />
 
     </div>
   );
