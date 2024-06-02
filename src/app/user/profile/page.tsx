@@ -3,6 +3,9 @@
 import axios from 'axios'
 import {useRouter} from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import UserProfile from './UserProfile';
+import "./profile.css"
 
 export default function Profile(){
     const router = useRouter()
@@ -23,10 +26,7 @@ export default function Profile(){
                 // const response = await axios.post('/api/access/', {token: 'token'})
                 // const data = response.data 
                 const response = await axios.post('/api/users/getdata', {token: 'token'})
-                console.log("response:", response)
-                const data =  response.data 
-                console.log("data", data)
-                
+                const data =  response.data          
                 for(let [key, value] of Object.entries(user)){
                     if ( value!=data[key]){
                         setUser(user =>({
@@ -46,11 +46,15 @@ export default function Profile(){
     }, []);
     console.log(user)
     return(
-        <div className='m-5'>
-            {}
-            <h1 className='text-[3em] text-black'>{user.username}</h1>
-            <p></p>
-            <button className="p-3" onClick={onSignOut}>Log Out</button>
+        <div className={['m-5 flex', "Profile"].join(" ")}>
+            <div className={['flex justify-start', "UserData"].join(" ")}><p>Place holder</p></div>
+            <div className={['ProfileSection', 'flex flex-col content-center items-center jusitfy-end'].join(" ")}>
+                <UserProfile  username = {user.username} name = {user.name} bio = {user.bio} image = {user.image}/>
+                <div className='flex gap-2 w-[75%]'>
+                    <button className="text-center grow">Edit Profile</button>
+                    <button className="grow-0 w-fit]" onClick={onSignOut}>Log Out</button>
+                </div>
+            </div>
         </div>
     )
 }

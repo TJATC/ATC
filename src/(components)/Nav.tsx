@@ -35,7 +35,7 @@ export default function Nav(props: BoxProps){
             }
         }
         fetchData();
-    })
+    }, [])
     
 
     const toggleit = () =>{
