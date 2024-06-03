@@ -8,23 +8,29 @@ interface UserProfileProps{
     username: any, 
     name: any, 
     bio: any, 
-    image: any
+    image: any,
+    setToggleUser: any,
+    fetchData: any,
 }
 
 
 export default function profileEdit(props:UserProfileProps){
     const router = useRouter();
     const [user, setUser] = useState({
+        username: props.username,
         name: props.name, 
         bio: props.bio, 
         image: props.image
     })
-    const onSave = async (user:any) =>{
-        console.log("Here")
+    const onSave = async () =>{
+        console.log("User Data:", user)
         try {
-            const response = await axios.post('/api/users/login', user)
-            console.log('Login Successful Up', response.data);
-            router.push('/user/profile') // Moving the user to the login page
+            const response = await axios.post('/api/users/updatedata', user)
+            console.log('Save Successful', response.data);
+            // router.push('/user/pro  file');
+            // router.refresh();// Moving the user to the login page
+            props.setToggleUser(true)
+            props.fetchData()
         } catch (error:any) {
             console.log(error.message)
         }
@@ -42,18 +48,17 @@ export default function profileEdit(props:UserProfileProps){
                     type="text" 
                     placeholder="Name" 
                     value = {user.name}
-                    onChange = {(e) => setUser({...user, })}
+                    onChange = {(e) => setUser({...user, name: e.target.value})}
                     id="name"
                 />
                 <br />
                 <label htmlFor="name">Bio</label> 
                 <textarea 
                     placeholder="Bio" 
-                    value = {user.name}
-                    onChange = {(e) => setUser({...user, })}
+                    value = {user.bio}
+                    onChange = {(e) => setUser({...user, bio: e.target.value})}
                     id="bio"
                 />
-                {props.bio && props.image!="" ?<p>{props.bio}</p> : <></>}
             </div>
             
         </div>

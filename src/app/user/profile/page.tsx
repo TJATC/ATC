@@ -5,7 +5,6 @@ import {useRouter} from 'next/navigation';
 import { useEffect, useState } from 'react';
 import UserProfile from './UserProfile';
 import ProfileEdit from './profileEdit';
-import { onSave } from './profileEdit';
 import "./profile.css"
 
 export default function Profile(){
@@ -16,6 +15,7 @@ export default function Profile(){
     const onSignOut = async ()=>{
         try {
             const response = await axios.get('/api/users/logout')
+            console.log(response)
             router.push('/')
         } catch (error:any) {
             console.log(error.message)
@@ -25,28 +25,29 @@ export default function Profile(){
         if(toggleUser) setToggleUser(false)
         else setToggleUser(true)
     }
-    useEffect(()=>{
-        async function fetchData(){
-            try {
-                // const response = await axios.post('/api/access/', {token: 'token'})
-                // const data = response.data 
-                const response = await axios.post('/api/users/getdata', {token: 'token'})
-                const data =  response.data          
-                for(let [key, value] of Object.entries(user)){
-                    if ( value!=data[key]){
-                        setUser(user =>({
-                            ...user, 
-                            ...{[key]:data[key]}
-                        }));
-                    }
-                }
 
-                
-                console.log(user)
-            } catch (error) {
-                
+    async function fetchData(){
+        try {
+            // const response = await axios.post('/api/access/', {token: 'token'})
+            // const data = response.data 
+            const response = await axios.post('/api/users/getdata', {token: 'token'})
+            const data =  response.data          
+            for(let [key, value] of Object.entries(user)){
+                if ( value!=data[key]){
+                    setUser(user =>({
+                        ...user, 
+                        ...{[key]:data[key]}
+                    }));
+                }
             }
+
+            
+            console.log(user)
+        } catch (error) {
+            
         }
+    }
+    useEffect(()=>{
        fetchData()
     }, []);
     console.log(user)
@@ -63,7 +64,7 @@ export default function Profile(){
             </div>
             : 
             <div className='flex flex-col content-center items-center jusitfy-end'>
-                <ProfileEdit  username = {user.username} name = {user.name} bio = {user.bio} image = {user.image}/>
+                <ProfileEdit  username = {user.username} name = {user.name} bio = {user.bio} image = {user.image} setToggleUser = {setToggleUser} fetchData={fetchData}/>
                 <div className='flex gap-2 w-[75%] mt-2'>
                     <button className="text-center grow bg-slate-50" onClick={switchToggle}>Cancel</button>       
                     <button className="grow-0 w-fit bg-slate-50" onClick={onSignOut}>Log Out</button>
@@ -74,3 +75,4 @@ export default function Profile(){
         </div>
     )
 }
+
