@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { useState } from "react"
+import { useRef, useState } from "react"
 import axios from "axios"
 import {useRouter} from 'next/navigation'
 
@@ -20,8 +20,10 @@ export default function profileEdit(props:UserProfileProps){
         username: props.username,
         name: props.name, 
         bio: props.bio, 
-        image: props.image
     })
+
+
+
     const onSave = async () =>{
         console.log("User Data:", user)
         try {
@@ -43,6 +45,7 @@ export default function profileEdit(props:UserProfileProps){
                 {props.image && props.image!=""? <></> : <Image src='/profile/temp3.png' width={300} height={300} alt="Picture of the author"/>}
             </div>
             <div className="mt-2 flex flex-col">
+                <p>Click <a className="text-red-700 underline mb-3" href="/user/image">here</a> to change your profile image!</p>
                 <label htmlFor="name">Name</label> 
                 <input 
                     type="text" 
@@ -51,6 +54,7 @@ export default function profileEdit(props:UserProfileProps){
                     onChange = {(e) => setUser({...user, name: e.target.value})}
                     id="name"
                 />
+                
                 <br />
                 <label htmlFor="name">Bio</label> 
                 <textarea 
