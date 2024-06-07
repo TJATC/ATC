@@ -32,6 +32,10 @@ export async function POST(request: NextRequest){
             username, 
             email, 
             password: hashedPassword,
+            streak: 0,
+            currDate: new Date(),
+            activity: 0,
+            highstreak: 0
         });
 
         // Save into Database

@@ -26,7 +26,7 @@ export async function POST(request: NextRequest){
         const result = await User.updateOne(filter, updateDoc, options)
         return NextResponse.json(user, {status:200})
     } catch (error:any) {
-        console.log(error)
+        NextResponse.json({error: error.message}, {status:500})
     }
     
 }

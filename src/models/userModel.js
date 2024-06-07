@@ -19,10 +19,13 @@ const userSchema = new mongoose.Schema({
         type: String, 
         required: true, 
     },
+    name: String, 
     bio: String, 
     image: String, 
-    streak: String,
-    name: String, 
+    streak: Number,
+    currDate: String, 
+    activity:  Number,
+    highstreak: Number
 
 })
 
