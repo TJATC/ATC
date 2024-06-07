@@ -1,11 +1,12 @@
-import Intro from "./Intro"
+import Main from "./(IntroComp)/Main"
 import Approach from "./Approach"
 import Leadership from "./Leadership"
 import Heading from "@/(components)/Heading"
+
 export default function about(){
     return(
         <div>
-            <Intro/>
+            <Main source="/about_us.png"/>
             <Heading link="none" num="1" blurb="Our Approach"/>
             <Approach/>
             <Heading link="none" num="2" blurb="Leadership"/>

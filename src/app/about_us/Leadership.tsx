@@ -9,8 +9,6 @@ export default function Leadership(){
                     <Card key={index} name={name} role={role} img={image}/>
                 ))
             }
-            
-
         </div>
     )
 }
