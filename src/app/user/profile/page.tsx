@@ -5,11 +5,15 @@ import {useRouter} from 'next/navigation';
 import { useEffect, useState } from 'react';
 import UserProfile from './UserProfile';
 import ProfileEdit from './profileEdit';
+import { FaFire } from "react-icons/fa";
+import { SiStreamrunners } from "react-icons/si";
+import { BsBrightnessAltHighFill } from "react-icons/bs";
+import Award from './Award';
 import "./profile.css"
 
 export default function Profile(){
     const router = useRouter()
-    const [user, setUser] = useState({username:"", name: "", bio:"", image: "", streak:""})
+    const [user, setUser] = useState({username:"", name: "", bio:"", image: "", streak:"", activity:"", highstreak:""})
     const [toggleUser, setToggleUser] = useState(true)
 
     const onSignOut = async ()=>{
@@ -50,10 +54,17 @@ export default function Profile(){
     useEffect(()=>{
        fetchData()
     }, []);
+
     console.log(user)
     return(
         <div className={['m-5 flex', "Profile"].join(" ")}>
-            <div className={['flex justify-start', "UserData"].join(" ")}><p>Place holder</p></div>
+            <div className={['flex justify-center content-center items-center place-content-around m-5 p-5', "UserData"].join(" ")}>
+                    <Award compToPass={<FaFire className=' w-[4em] h-[4em] text-[var(--med)]'/>} name="Streak" value={user.streak}/>
+                    <Award compToPass={<SiStreamrunners className=' w-[4em] h-[4em] text-[var(--med)]' />} name="Activity" value={user.activity}/>
+                    <Award compToPass={<BsBrightnessAltHighFill className=' w-[4em] h-[4em] text-[var(--med)]'/>} name="Highest Streak" value={user.highstreak}/>
+                
+            </div>``
+            
             {toggleUser ? 
             <div className={['ProfileSection', 'flex flex-col content-center items-center jusitfy-end'].join(" ")}>
                 <UserProfile  username = {user.username} name = {user.name} bio = {user.bio} image = {user.image}/>

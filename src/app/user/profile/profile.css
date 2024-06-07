@@ -3,9 +3,8 @@
 }
 
 .Profile .UserData{
-    display: flex;
     flex: 0 0 67%;
-    justify-content: flex-start;
+
 }
 
 .ProfileSection >*{
