@@ -6,11 +6,11 @@ export default function about(){
     return(
         <div>
             <Intro/>
-            <Heading link="" num="1" blurb="Our Approach"/>
+            <Heading link="none" num="1" blurb="Our Approach"/>
             <Approach/>
-            <Heading link="" num="2" blurb="Leadership"/>
+            <Heading link="none" num="2" blurb="Leadership"/>
             <Leadership/>
-            <Heading link="" num="3" blurb="History"/>
+            <Heading link="none" num="3" blurb="History"/>
         </div>
     )
 }
