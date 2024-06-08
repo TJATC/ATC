@@ -6,8 +6,8 @@ import Heading from "@/(components)/Heading"
 export default function about(){
     return(
         <div>
-            <p>H</p>
-            {/* <Main source="/about_us.png"/>
+            <Main source="/about_us.png"/>
+            {/*
             <Heading link="none" num="1" blurb="Our Approach"/>
             <Approach/>
             <Heading link="none" num="2" blurb="Leadership"/>
