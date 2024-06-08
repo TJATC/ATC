@@ -13,9 +13,9 @@ export default function about(){
             <Approach/>
             
             <Heading link="none" num="2" blurb="Leadership"/>
-            {/*
+            
             <Leadership/>
-            <Heading link="none" num="3" blurb="History"/> */}
+            <Heading link="none" num="3" blurb="History"/> 
         </div>
     )
 }

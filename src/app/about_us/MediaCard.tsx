@@ -4,9 +4,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
 interface CardProps{
-    name: string, 
-    role: string,
-    img: string
+    n: string, 
+    r: string,
+    i: string
 }
 
 export default function MediaCard(props:CardProps) {
@@ -14,15 +14,15 @@ export default function MediaCard(props:CardProps) {
     <Card className="w-[50vw] md:w-[15vw]"  sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: "25vh" }}
-        image={props.img}
+        image={props.i}
         title="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {props.name}
+          {props.n}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {props.role}
+          {props.r}
         </Typography>
       </CardContent>
     </Card>

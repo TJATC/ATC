@@ -6,7 +6,7 @@ export default function Leadership(){
         <div className="flex flex-wrap gap-[2em] mx-[5vw] justify-center">
             {
                 leaders.map(({name, role, image}, index)=>(
-                    <MediaCard key={index} name={name} role={role} img={image}/>
+                    <MediaCard key={index} n={name} r={role} i={image}/>
                 ))
             }
         </div>
