@@ -1,4 +1,4 @@
-import Card from "./(IntroComp)/Card"
+import MediaCard from "./MediaCard"
 import leaders from "@/(assets)/Leadership.json"
 
 export default function Leadership(){
@@ -6,7 +6,7 @@ export default function Leadership(){
         <div className="flex flex-wrap gap-[2em] mx-[5vw] justify-center">
             {
                 leaders.map(({name, role, image}, index)=>(
-                    <Card key={index} name={name} role={role} img={image}/>
+                    <MediaCard key={index} name={name} role={role} img={image}/>
                 ))
             }
         </div>

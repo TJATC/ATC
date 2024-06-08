@@ -1,4 +1,4 @@
-import Main from "./(IntroComp)/Main"
+import Main from "./Main"
 import Approach from "./Approach"
 import Leadership from "./Leadership"
 import Heading from "@/(components)/Heading"

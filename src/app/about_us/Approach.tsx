@@ -1,4 +1,4 @@
-import Blurb from "./(IntroComp)/Blurb"
+import Blurb from "./Blurb"
 import { IoPersonOutline } from "react-icons/io5";
 import { FaAssistiveListeningSystems } from "react-icons/fa";
 import { FaHandsHelping } from "react-icons/fa";
