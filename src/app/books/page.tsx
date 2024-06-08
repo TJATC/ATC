@@ -2,25 +2,26 @@
 import axios from "axios";
 import Box from "./Box"
 import "./Books.css"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default async function books(){
-    let data:any = {}
+    const [data, setData] = useState({})
     useEffect(()=>{
-        const onLogin = async () =>{
+        async function fetchSlides(){
             try {
                 const response = await axios.post('/api/slides')
+                setData(response.data.data)
                 return response.data.data
             } catch (error:any) {
                 console.log(error.message)
             }
         }
-        data = onLogin()
-    }, [])
+        fetchSlides()
+        console.log("data of DATA ", data)
+        
+    },[])
     
-
     
-    console.log(data)
     return(
         <div className={["Books"].join(" ")}>
             {
