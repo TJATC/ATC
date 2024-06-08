@@ -29,7 +29,7 @@ export default async function books(){
         <div className={["Books"].join(" ")}>
             {
             Object.keys(data).map((key:string)=>(
-                <Box name={data[key as keyof typeof data]["name"]} link = {data[key]["webViewLink"]} image = {data[key]["thumbnailLink"]}/>
+                <Box name={data[key as keyof typeof data]["name"]} link = {data[key as keyof typeof data]["webViewLink"]} image = {data[key as keyof typeof data]["thumbnailLink"]}/>
             ))
         }
         </div>
