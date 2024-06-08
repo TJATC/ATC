@@ -15,7 +15,6 @@ interface BoxProps{
 
 export default function Box(props: BoxProps){
     const router = useRouter();
-    console.log(props)
     async function click(){
         try {
             const response = await axios.post('/api/users/getdata', {token: 'token'})

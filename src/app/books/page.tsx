@@ -4,6 +4,10 @@ import Box from "./Box"
 import "./Books.css"
 import { useEffect, useState } from "react";
 
+interface Dic {
+
+}
+
 export default async function books(){
     const [data, setData] = useState({})
     useEffect(()=>{
@@ -16,8 +20,7 @@ export default async function books(){
                 console.log(error.message)
             }
         }
-        fetchSlides()
-        console.log("data of DATA ", data)
+        console.log(fetchSlides())
         
     },[])
     
@@ -25,8 +28,8 @@ export default async function books(){
     return(
         <div className={["Books"].join(" ")}>
             {
-            Object.keys(data).map((key:any)=>(
-                <Box name={data[key]["name"]} link = {data[key]["webViewLink"]} image = {data[key]["thumbnailLink"]}/>
+            Object.keys(data).map((key:string)=>(
+                <Box name={data[key as keyof typeof data]["name"]} link = {data[key]["webViewLink"]} image = {data[key]["thumbnailLink"]}/>
             ))
         }
         </div>
