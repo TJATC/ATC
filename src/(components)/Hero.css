@@ -52,3 +52,19 @@
     box-shadow:  2px 2px 6px var(--light), -2px -2px 4px var(--light); 
 
 }
+
+@media (max-width:780px) {
+    .Hero .Info{
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        margin: auto;
+        width:50vw;
+      }
+    .Hero .Info h1{
+        font-size: 4em;
+    }
+    .Hero .Info .Buttons{
+        display: none;
+    }
+}

@@ -18,6 +18,7 @@ interface BoxProps{
 export default function Nav(props: BoxProps){
 
     const [LinksClass, setLinksClass] = useState("")
+    const [ItemsClass, setItemsClass] = useState("")
     const [LoggedIn, setLoggedIn] = useState(false)
 
     useEffect(()=>{
@@ -41,18 +42,21 @@ export default function Nav(props: BoxProps){
     const toggleit = () =>{
         if (LinksClass === ""){
             setLinksClass   ("On")
+            setItemsClass ("Off")
         } 
         else{
             setLinksClass("")
+            setItemsClass ("")
         }
     }
 
     
     
     return(
-        <div className={['Nav', montserrat.className, props.color].join(' ')}>
-            <div className='Logo'>
-                <a href="/">TJ Assistive Technology</a>
+        <div className={['Nav',ItemsClass, montserrat.className, props.color].join(' ')}>
+            <div className={['Logo'].join(' ')}>
+                <a href="/" id='LogoRI'>TJ Assistive Technology</a>
+                <div id="LogoMID"></div>
                 <span onClick={toggleit} className="navbar-toggle" id="js-navbar-toggle">
                    <Hamburger /> 
                 </span>

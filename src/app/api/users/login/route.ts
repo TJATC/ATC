@@ -49,6 +49,28 @@ export async function POST(request: NextRequest){
             message: 'Login Successful', 
             success: true,
         });
+
+        const date = new Date()
+        const formattedDate = date.toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+          })
+ 
+        console.log("User", user)
+        const filter = { username: user.username };
+        const options = { upsert: true };
+        
+        //update Date
+        if (user.currDate==null || formattedDate!=user.currDate){
+            let hs = user.highstreak;
+            if (user.streak+1>user.highstreak){hs = user.streak+1}
+            // await User.updateOne(filter, {$set:{currDate: date, activity: 0, streak:0, highstreak:0}}, options)
+
+            await User.updateOne(filter, {$set:{currDate: formattedDate, activity: 0, streak:user.streak+=1, highstreak:hs}}, options)
+
+        }
+      
         
         // Send the token 
         response.cookies.set('token', token, {httpOnly:true});

@@ -58,15 +58,8 @@ export default function Profile(){
     console.log(user)
     return(
         <div className={['m-5 flex', "Profile"].join(" ")}>
-            <div className={['flex justify-center content-center items-center place-content-around m-5 p-5', "UserData"].join(" ")}>
-                    <Award compToPass={<FaFire className=' w-[4em] h-[4em] text-[var(--med)]'/>} name="Streak" value={user.streak}/>
-                    <Award compToPass={<SiStreamrunners className=' w-[4em] h-[4em] text-[var(--med)]' />} name="Activity" value={user.activity}/>
-                    <Award compToPass={<BsBrightnessAltHighFill className=' w-[4em] h-[4em] text-[var(--med)]'/>} name="Highest Streak" value={user.highstreak}/>
-                
-            </div>``
-            
             {toggleUser ? 
-            <div className={['ProfileSection', 'flex flex-col content-center items-center jusitfy-end'].join(" ")}>
+            <div className={['ProfileSection', 'flex flex-col content-center items-center jusitfy-end ml-[5%]'].join(" ")}>
                 <UserProfile  username = {user.username} name = {user.name} bio = {user.bio} image = {user.image}/>
                 <div className='flex gap-2 w-[75%]'>
                     <button className="text-center grow" onClick={switchToggle}>Edit Profile</button>
@@ -83,6 +76,15 @@ export default function Profile(){
             </div>
             
             }
+
+            <div className={['flex justify-center content-center items-center place-content-around m-5 p-5', "UserData"].join(" ")}>
+                    <Award compToPass={<FaFire className=' w-[4em] h-[4em] text-[var(--med)]'/>} name="Streak" value={user.streak}/>
+                    <Award compToPass={<SiStreamrunners className=' w-[4em] h-[4em] text-[var(--med)]' />} name="Activity" value={user.activity}/>
+                    <Award compToPass={<BsBrightnessAltHighFill className=' w-[4em] h-[4em] text-[var(--med)]'/>} name="Highest Streak" value={user.highstreak}/>
+                
+            </div>
+            
+            
         </div>
     )
 }

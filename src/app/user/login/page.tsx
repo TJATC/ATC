@@ -46,7 +46,7 @@ export default function Login(){
         <div className={['flex flex-col justify-content py-2 mx-[10vw] ', montserrat.className].join(' ')}>
             
             <h1 className="py-6  text-dark-color text-7xl">
-                {loading ? "Processing. . ." : "Login"}
+                Login
             </h1>
             <Link href="/user/signup" className="mb-4">
                     <p>Don't have an account? <span className="font-bold text-med-color ml-2 cursor-pointer underline">Sign up for an account</span></p>

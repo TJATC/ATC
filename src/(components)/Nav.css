@@ -49,27 +49,54 @@
         display: none;
 
     }
+    
+    .Nav{
+        display: block;
+        margin:1.5em;
+    }
 
     .Nav .Logo{
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+    
+    .Nav .Logo > *{
+        display: inline-block;
+    }
+
+
+    Nav .Logo #LogoMID {
+        flex: 1
     }
 
     .Nav .Logo .navbar-toggle {
         display: block;
-        float: right;
-
     }
+
+    .Nav .Off{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        min-height: 100%;
+        justify-content: center; /* center items vertically, in this case */
+        align-items: center;   
+        min-height: 100vh;  
+    }
+
     .Nav .On{
         display: flex;
         flex-direction: column;
-        gap: 1.1rem;
-        overflow: hidden;
-        align-items: center;
-        justify-content:flex-start;
-        margin-top: 5vh;
-        min-height: 100vh;
+        flex-basis: 100%;
+        min-height: 100%;
+        justify-content: center; /* center items vertically, in this case */
+        align-items: center;  
+         
     }
+    .Nav .On >*{
+        flex: 1;
+        margin: 1em;
+    }
+
 }

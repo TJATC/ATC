@@ -63,3 +63,17 @@ textarea:focus{
 #bio{
     padding: .1em .4em 1.4em;
 }
+@media (max-width:780px) {
+    .Profile{
+        display: flex;
+        flex-direction: column;
+    }
+    .Profile .UserData{
+        display: flex;
+        flex-direction: column;
+        gap:2em;
+    }
+    .Profile .UserData >*{
+        min-width: 60%;
+    }
+}
