@@ -7,7 +7,7 @@ export default function HomeLayout({
 }:{children: React.ReactNode}){
     return (
         <section>
-        <Nav place = {3} color='Dark'/>
+        <Nav place = {0} color='Dark'/>
         <Suspense fallback={< Loading />}>
         {children}
         </Suspense>

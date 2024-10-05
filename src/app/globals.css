@@ -66,3 +66,7 @@ main {
   display: block;
   flex: 1 0 auto;
 }
+
+h1 {
+  user-select: none;
+}

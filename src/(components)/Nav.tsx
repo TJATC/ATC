@@ -65,14 +65,15 @@ export default function Nav(props: BoxProps){
                 <Link href="/about_us" style={props.place===0 ? { borderBottom: "5px solid #453F78"} : {}}>About Us</Link>
                 <Link href="/games" style={props.place===1 ? {borderBottom: "5px solid #453F78"} : {}}>Games</Link>
                 <Link href="/books" style={props.place===2 ? { borderBottom: "5px solid #453F78"} : {}}>Books</Link>
+                <Link href="/at_connect" style={props.place===5 ? { borderBottom: "5px solid #453F78"} : {}}>AT Connect</Link> 
             </div>
 
-            <div className={['Navlinks', LinksClass].join(' ')}>
+            {/* <div className={['Navlinks', LinksClass].join(' ')}>
                  <Link href="/at_connect" style={props.place===5 ? { borderBottom: "5px solid #453F78"} : {}}>AT Connect</Link> 
-                {/* {!LoggedIn ? <Link href="/user/signup" style={props.place===3 ? { borderBottom: "5px solid #453F78"} : {}}>Sign Up</Link> : <></>}
+                {!LoggedIn ? <Link href="/user/signup" style={props.place===3 ? { borderBottom: "5px solid #453F78"} : {}}>Sign Up</Link> : <></>}
                 {!LoggedIn ? <Link href="/user/login" style={props.place===4 ? {borderBottom: "5px solid #453F78"} : {}}>Login</Link>: <></>}
-                {LoggedIn ? <Link href="/user/profile" style={props.place===5 ? { borderBottom: "5px solid #453F78"} : {}}>Profile</Link> : <></>} */}
-            </div>
+                {LoggedIn ? <Link href="/user/profile" style={props.place===5 ? { borderBottom: "5px solid #453F78"} : {}}>Profile</Link> : <></>}
+            </div> */}
         </div>
     )
     
