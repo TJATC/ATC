@@ -1,0 +1,47 @@
+[
+    {
+      "name": "Leah Zhang",
+      "role": "President", 
+      "image":"/leadership/2024_2025/Leah_Zhang.png"
+    },
+    {
+      "name": "Chloe Toda",
+      "role": "Vice President", 
+      "image":"/leadership/2024_2025/Chloe_Toda.jpg"
+    },
+    {
+      "name": "Shabeer Manalai",
+      "role": "Vice President", 
+      "image":"/leadership/2024_2025/Shabeer_Manalai.png"
+    },
+    {
+        "name": "Rohan Singh",
+        "role": "Treasurer", 
+        "image":"/leadership/2024_2025/Rohan_Singh.png"
+    },
+    {
+      "name": "Yohan Ramirez",
+      "role": "Historian", 
+      "image":"/leadership/2024_2025/Yohan_Ramirez.png"
+    },
+    {
+      "name": "Austen Ji",
+      "role": "Activities Coordinator", 
+      "image":"/leadership/2024_2025/Austen_Ji.png"
+    },
+    {
+      "name": "Mary Beth Fleming",
+      "role": "Club Sponsor", 
+      "image":"/leadership/2024_2025/Mary_Beth_Fleming.jpg"
+    },
+    {
+      "name": "Chuck Lord",
+      "role": "Club Sponsor", 
+      "image":"/leadership/2024_2025/Chuck_Lord.jpg"
+    },
+    {
+      "name": "Eric Fleming",
+      "role": "Club Sponsor", 
+      "image":"/leadership/2024_2025/Eric_Fleming.jpg"
+    }
+  ]

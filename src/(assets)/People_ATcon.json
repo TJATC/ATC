@@ -1,37 +1,62 @@
 [
-    {
-      "name": "yes Leah Zhang",
-      "role": "Co-President", 
-      "image":"/leadership/2023_2024/Leah_Zhang.png"
-    },
-    {
-      "name": "yes shabeer Manalai",
-      "role": "Activities Coordinator", 
-      "image":"/leadership/2023_2024/Shabeer_Manalai.png"
-    },
-    {
-      "name": "yes Chloe Toda",
-      "role": "Activities Coordinator", 
-      "image":"/leadership/2023_2024/Chloe_Toda.jpg"
-    },
-    {
-        "name": "maybe Rohan Singh",
-        "role": "Publicist", 
-        "image":"/leadership/2023_2024/Rohan_Singh.jpg"
-    },
-    {
-      "name": "yes? Mary Beth Fleming",
-      "role": "Club Sponsor", 
-      "image":"/leadership/2023_2024/Mary_Beth_Fleming.jpg"
-    },
-    {
-      "name": "yes Chuck Lord",
-      "role": "Club Sponsor", 
-      "image":"/leadership/2023_2024/Chuck_Lord.jpg"
-    },
-    {
-      "name": "yes? Eric Fleming",
-      "role": "Club Sponsor", 
-      "image":"/leadership/2023_2024/Eric_Fleming.jpg"
-    }
-  ]
+  {
+    "name": "Leah Zhang",
+    "role": "Event Lead", 
+    "image":"/leadership/atconnect/2024_2025/Leah_Zhang.png"
+  },
+  {
+    "name": "Chloe Toda",
+    "role": "Project & Technology Team", 
+    "image":"/leadership/atconnect/2024_2025/Chloe_Toda.jpg"
+  },
+  {
+    "name": "Shabeer Manalai",
+    "role": "Technology Team", 
+    "image":"/leadership/atconnect/2024_2025/Shabeer_Manalai.png"
+  },
+  {
+      "name": "Rohan Singh",
+      "role": "Finance & Outreach Team", 
+      "image":"/leadership/atconnect/2024_2025/Rohan_Singh.png"
+  },
+  {
+    "name": "Yohan Ramirez",
+    "role": "Project Team", 
+    "image":"/leadership/atconnect/2024_2025/Yohan_Ramirez.png"
+  },
+  {
+    "name": "Austen Ji",
+    "role": "Outreach & Technology Team", 
+    "image":"/leadership/atconnect/2024_2025/Austen_Ji.png"
+  },
+
+
+
+
+  {
+    "name": "Grace Amartuvshin",
+    "role": "Outreach Team", 
+    "image":"/leadership/atconnect/2024_2025/Grace_Amartuvshin.png"
+  },
+  {
+    "name": "Ananya Bhatt",
+    "role": "Outreach & Project Team", 
+    "image":"/leadership/atconnect/2024_2025/Ananya_Bhatt.png"
+  },
+  {
+    "name": "Arush Hosur",
+    "role": "Finance Team", 
+    "image":"/leadership/atconnect/2024_2025/Arush_Hosur.png"
+  },
+  {
+    "name": "Saatvik Kesarwani",
+    "role": "Project & Technology Team", 
+    "image":"/leadership/atconnect/2024_2025/Saatvik_Kesarwani.png"
+  },
+  {
+    "name": "Sanjeev Subramanian",
+    "role": "Finance Team", 
+    "image":"/leadership/atconnect/2024_2025/Sanjeev_Subramanian.png"
+  }
+  
+]

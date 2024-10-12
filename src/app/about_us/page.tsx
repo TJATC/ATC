@@ -2,7 +2,7 @@ import Main from "./Main"
 import Approach from "./Approach"
 import Leadership from "./Leadership"
 import Heading from "@/(components)/Heading"
-import leadersData_aboutus from "@/(assets)/Leadership.json"
+import leadersData_aboutus from "@/(assets)/Leadership_2024_2025.json"
 
 export default function about(){
     return(
