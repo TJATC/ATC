@@ -3,7 +3,7 @@ import Main from "./Main"
 import Heading from "@/(components)/Heading"
 import Leadership from "../about_us/Leadership"
 import atcon_people from "@/(assets)/People_ATcon.json"
-
+import SponsorsPage from "./Sponsors"  // Add this import
 
 export default function about(){
     return(
@@ -17,6 +17,7 @@ export default function about(){
             <Leadership leaders={atcon_people} />
 
             <Heading link="/books"  num="3" blurb="Sponsors"/>
+            <SponsorsPage />  {/* Add this line */}
              {/*
             <Heading link="/user/signup"  num="4" blurb="Account"/> */}
         </div>
