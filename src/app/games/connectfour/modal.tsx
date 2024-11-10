@@ -66,7 +66,7 @@ export function Modal({ isOpen, onClose,img, name }:ModalProps) {
               height={imgDimensions.height}
               onLoadingComplete={({ naturalWidth, naturalHeight }) => setImgDimensions({ width: naturalWidth, height: naturalHeight })}
             />
-          </div>
+          </div>      
         </div>
       </div>
       </div>
