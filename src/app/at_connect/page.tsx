@@ -7,7 +7,7 @@ import SponsorsPage from "./Sponsors"  // Add this import
 import PrizesPage from "./Prizes"  
 import Approach from "./Approach"
 import { Carousel, CarouselItem } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function about(){
