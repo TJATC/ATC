@@ -16,6 +16,7 @@ interface ArtProps {
 export default function GamePiece(props: ArtProps) {
 
   const setModal = () => {
+    console.log(props.index)
     props.openModal(props.index)
   }
 

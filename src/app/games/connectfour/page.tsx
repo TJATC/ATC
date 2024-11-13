@@ -27,16 +27,17 @@ export default function Page() {
     const changeColor = (index:number) => {
         if (counter%2)
         {
-            connectfour[index].color = "blue";
+            connectfour[index].color = "#FFCB77";
         }
 
         else {
-            connectfour[index].color = "red"; 
+            connectfour[index].color = "#CC2936"; 
         }
 
     }
 
     const openModal = (index: number) => {
+        setCurrIndex(index)
         setModalOpen(true); //can open modal
         changeCounter();
         changeColor(index);
@@ -59,7 +60,7 @@ export default function Page() {
                 <GamePiece name={name} img={img} index={index} color={color} counter={counter} openModal={openModal}/>
             ))}
             </div>
-            <div className="bg-slate-300 p-3 rounded-3xl m-5" onClick={changeAll}>
+            <div className="bg-slate-300 p-3 rounded-3xl m-5 cursor-pointer" onClick={changeAll}>
                 Reset
             </div>
             
