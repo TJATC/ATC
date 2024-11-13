@@ -18,7 +18,7 @@ export default function about(){
             <Main source="/poster2.png"/>
             <Heading link="/about_us" num="1" blurb="About Us"/>
             <div className="flex flex-wrap justify-center items-center gap-[2vw] mt-2">
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: 'relative', overflow: 'clip' }}>
                     <img
                         src="/ATConnect_1920_1080.png"
                         alt="ATConnect Banner"
