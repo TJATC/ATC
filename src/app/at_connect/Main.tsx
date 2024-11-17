@@ -13,8 +13,8 @@ export default function Main(props: MainProps){
             <div className="radialBg"></div>
             <Image src={props.source} alt="bg image" fill ={true} style={{objectFit:"cover"}} className="bgimg"/>
             <div className="float-left ml-[5%] w-[50%]">
-                <h1 className="font-black text-9xl">AT CONNECT</h1>
-                <h3 className={["font-semibold", " text-[2.5em] md:text-[1.1em]"].join(" ")}>
+            <h1 className="font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl">ATCONNECT</h1>
+            <h3 className={["font-semibold", " text-[2.5em] md:text-[1.1em]"].join(" ")}>
                     I came. I saw. I coded. Join us for a day of fun. 
                 </h3>
                 <div className="flex gap-4 text-black-color font-bold mx-3 my-3">
