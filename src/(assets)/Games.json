@@ -1,5 +1,10 @@
 [
     {
+      "name": "Connect Four",
+      "link": "/games/connectfour/", 
+      "image":"/game_covers/16.jpg"
+    },  
+    {
       "name": "Spooky Spinner",
       "link": "https://tj-atc.github.io/ATC/games/spookyspinner/", 
       "image":"/game_covers/0.png"
