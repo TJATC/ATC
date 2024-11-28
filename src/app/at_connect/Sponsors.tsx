@@ -21,20 +21,6 @@ const sponsors: Sponsor[] = [
     // Add more sponsors here with their respective tiers
 ];
 
-<<<<<<< HEAD
-export default function SponsorsPage() {
-    return (
-        <div className={['sponsors-page', montserrat.className].join(' ')} style={{ minHeight: '400px' }}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <h1 className="text-4xl font-bold text-center mb-12" style={{ color: 'black' }}>Our Sponsors</h1>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {sponsors.map((sponsor, index) => (
-                        <div 
-                            key={index} 
-                            className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center"
-                            style={{ border: '1px solid blue' }}
-=======
 const TierSection = ({ title, backgroundColor, sponsors: tierSponsors }: { 
     title: string, 
     backgroundColor: string, 
@@ -68,7 +54,6 @@ const TierSection = ({ title, backgroundColor, sponsors: tierSponsors }: {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-pale-color w-fit p-4 rounded-xl text-black-color font-bold hover:opacity-80"
->>>>>>> c108f3c (Added tiers for sponsors)
                         >
                             Visit Website
                         </a>
