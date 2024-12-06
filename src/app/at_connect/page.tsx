@@ -13,6 +13,19 @@ import PrizesPage from "./Prizes";
 export default function About() {
   const sections = ["About Us", "Sponsors", "Prizes", "People"];
   const [activeSection, setActiveSection] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if the device is mobile or desktop
+    const updateMobileView = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    updateMobileView(); // Initial check
+    window.addEventListener("resize", updateMobileView);
+
+    return () => window.removeEventListener("resize", updateMobileView);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,37 +76,38 @@ export default function About() {
         ))}
       </div>
 
-      {/* Vertical Progress Bar with text inside */}
-      <div className="fixed left-0 top-0 h-full flex flex-col justify-between z-50">
-        <div className="relative h-full w-8 bg-gray-300 rounded">
-          <div className="w-full bg-blue-500 transition-all duration-200 ease-in-out" style={{
-            height: `${((activeSection + 1) / sections.length) * 100}%`,
-          }}></div>
-          {sections.map((section, index) => (
-            <div
-              key={section}
-              className="absolute left-0 transform transition-all"
-              style={{
-                top: `${(index / (sections.length - 1)) * 100}%`,
-              }}
-            >
-              <span
-                className={`absolute left-1/2 transform -translate-x-1/2 text-xs font-medium text-white cursor-pointer`}
-                style={{
-                  position: "absolute",
-                  bottom: index === 0 ? "24%" : index === 3 ? "13%" : "40%",  // Adjusted positions for "About Us" and "People"
-                  transform: "translateY(50%) rotate(-90deg)", // Rotate text 90 degrees counter-clockwise
-                  letterSpacing: "-0.5px", // Bring text closer together
-                  whiteSpace: "nowrap", // Prevent text from wrapping
-                }}
-                onClick={() => handleTileClick(section)}
-              >
-                {section}
-              </span>
-            </div>
-          ))}
-        </div>
+      {/* Progress Bar */}
+      <div
+        className={`fixed ${
+          isMobile ? "bottom-0 w-full h-8" : "top-0 w-full h-4"
+        } flex z-50`}
+        style={{
+          backgroundColor: "rgba(220, 220, 220, 0.9)",
+        }}
+      >
+        <div
+          className="absolute transition-all duration-200 ease-in-out"
+          style={{
+            backgroundColor: isMobile ? "rgba(30, 144, 255, 0.5)" : "#1E90FF", // Translucent blue for mobile
+            width: isMobile
+              ? `${((activeSection + 1) / sections.length) * 100}%`
+              : `${((activeSection + 1) / sections.length) * 100}%`,
+            height: isMobile ? "100%" : "4px",
+          }}
+        ></div>
+        {sections.map((section, index) => (
+          <div
+            key={section}
+            className={`text-xs text-center ${
+              isMobile ? "w-1/4" : "inline-block"
+            } flex-1 cursor-pointer font-medium text-black`}
+            onClick={() => handleTileClick(section)}
+          >
+            <span>{section}</span>
+          </div>
+        ))}
       </div>
+
 
       {/* Content Sections */}
       <div id="about-us">
