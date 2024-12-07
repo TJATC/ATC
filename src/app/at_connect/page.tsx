@@ -33,8 +33,10 @@ export default function About() {
         (section) =>
           document.getElementById(section.toLowerCase().replace(" ", "-"))?.offsetTop || 0
       );
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
 
+      const scrollPosition = window.scrollY + window.innerHeight / 3; // Offset scroll for better accuracy
+
+      // Find the section the user is currently in
       const currentSection = sectionOffsets.findIndex(
         (offset, index) =>
           scrollPosition >= offset &&
@@ -78,36 +80,40 @@ export default function About() {
 
       {/* Progress Bar */}
       <div
-        className={`fixed ${
-          isMobile ? "bottom-0 w-full h-8" : "top-0 w-full h-4"
-        } flex z-50`}
+        className="fixed top-0 w-full flex z-50"
         style={{
           backgroundColor: "rgba(220, 220, 220, 0.9)",
+          position: "fixed", // Keep the bar fixed at the top
         }}
       >
+        {/* Blue progress bar (z-index: 0) */}
         <div
           className="absolute transition-all duration-200 ease-in-out"
           style={{
-            backgroundColor: isMobile ? "rgba(30, 144, 255, 0.5)" : "#1E90FF", // Translucent blue for mobile
-            width: isMobile
-              ? `${((activeSection + 1) / sections.length) * 100}%`
-              : `${((activeSection + 1) / sections.length) * 100}%`,
-            height: isMobile ? "100%" : "4px",
+            backgroundColor: "#1E90FF", // Consistent blue across devices
+            width: `${((activeSection + 1) / sections.length) * 100}%`, // Update the progress bar width based on section
+            height: "4px", // Keep it consistent for both mobile and desktop
+            zIndex: 0,
           }}
         ></div>
-        {sections.map((section, index) => (
-          <div
-            key={section}
-            className={`text-xs text-center ${
-              isMobile ? "w-1/4" : "inline-block"
-            } flex-1 cursor-pointer font-medium text-black`}
-            onClick={() => handleTileClick(section)}
-          >
-            <span>{section}</span>
-          </div>
-        ))}
-      </div>
 
+        {/* Section Labels (z-index: 1) */}
+        {sections.map((section, index) => {
+          const width = isMobile ? "w-1/4" : "inline-block";
+          const activeClass = activeSection === index ? "text-blue-500" : "text-black";
+
+          return (
+            <div
+              key={section}
+              className={`text-xs text-center ${width} flex-1 cursor-pointer font-medium ${activeClass} relative`}
+              onClick={() => handleTileClick(section)}
+              style={{ zIndex: 1 }}
+            >
+              <span>{section}</span>
+            </div>
+          );
+        })}
+      </div>
 
       {/* Content Sections */}
       <div id="about-us">
