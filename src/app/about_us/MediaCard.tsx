@@ -1,24 +1,30 @@
 import * as React from 'react';
-import {Card, CardContent, CardMedia, Typography} from '@mui/material';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 
-interface CardProps{
-    n: string, 
-    r: string,
-    i: string
+interface CardProps {
+  n: string;
+  r: string;
+  i: string;
 }
 
-export default function MediaCard(props:CardProps) {
+export default function MediaCard(props: CardProps) {
   return (
-    <Card className="w-[50vw] md:w-[15vw]"  sx={{ maxWidth: 345 }}>
+    <Card
+      className="flex flex-col w-full max-w-[300px] md:max-w-[400px] xl:max-w-[500px] mx-auto mb-4"
+      sx={{ display: 'flex', flexDirection: 'column', height: '400px' }}
+    >
+      {/* Image with fixed height and object fit */}
       <CardMedia
-        sx={{ height: "25vh" }}
+        sx={{ height: "200px", objectFit: "cover" }}
         image={props.i}
-        title="green iguana"
+        title="Profile Image"
       />
-      <CardContent>
+
+      <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
         <Typography gutterBottom variant="h5" component="div">
           {props.n}
         </Typography>
+
         <Typography variant="body2" color="text.secondary">
           {props.r}
         </Typography>

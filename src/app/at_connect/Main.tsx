@@ -3,8 +3,11 @@ import { Montserrat } from "next/font/google";
 const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','600', '700']});
 
 import "./Main.css"
+import Link from "next/link";
 interface MainProps{
     source: string
+    link: string
+    handleTileClick: (arg0:string)=>void
 }
 
 export default function Main(props: MainProps){
@@ -18,7 +21,8 @@ export default function Main(props: MainProps){
                     I came. I saw. I coded. Join us for a day of fun. 
                 </h3>
                 <div className="flex gap-4 text-black-color font-bold mx-3 my-3">
-                <a className="bg-pale-color w-fit p-4 rounded-xl">Learn More</a><a className="bg-pale-color w-fit p-4 rounded-xl">Contact Us</a>
+                <a className="bg-pale-color w-fit p-4 rounded-xl" onClick={()=>props.handleTileClick(props.link)}>Learn More</a>
+                <a href="mailto:info@tjatc.org" className="bg-pale-color w-fit p-4 rounded-xl">Contact Us</a>
                 </div>
              </div>
         </div>

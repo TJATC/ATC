@@ -1,4 +1,9 @@
+'use client';
 import MediaCard from "./MediaCard";
+import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface Leader {
   name: string;
@@ -11,18 +16,29 @@ interface LeadershipProps {
 }
 
 export default function Leadership({ leaders }: LeadershipProps) {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: true,
+    className: "center",
+    centerMode: true,
+    centerPadding: "120px",
+    slidesToShow: 4,
+    swipeToSlide: true,
+  };
+
   return (
-    <div className="relative px-4 py-8 max-w-7xl mx-auto">
-      <div className="overflow-x-auto scrollbar-hide">
-        <div className="grid grid-flow-col auto-cols-[50%] lg:auto-cols-[25%] gap-4 snap-x snap-mandatory">
-          {leaders.map(({ name, role, image }, index) => (
-            <div key={index} className="snap-start w-full">
-              <MediaCard n={name} r={role} i={image} />
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="m-10">
+      <Slider {...settings}>
+        {leaders.map(({ name, role, image }, index) => (
+          <div key={index} className="px-4"> {/* Adding px-4 for horizontal padding to create space between cards */}
+            <MediaCard n={name} r={role} i={image} />
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 }
-
