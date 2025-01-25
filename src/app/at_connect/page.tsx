@@ -9,9 +9,10 @@ import atcon_people from "@/(assets)/People_ATcon.json";
 import AboutUs from "./about_us";
 import SponsorsPage from "./Sponsors";
 import PrizesPage from "./Prizes";
+import JudgesPage from "./Judges";
 
 export default function About() {
-  const sections = ["About Us", "Sponsors", "Prizes", "People"];
+  const sections = ["About Us", "Sponsors", "Prizes", "Judges", "People"];
   const [activeSection, setActiveSection] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -127,8 +128,13 @@ export default function About() {
         <PrizesPage />
       </div>
 
+      <div id="judges">
+        <Heading link="" num="4" blurb="Judges" />
+        <JudgesPage />
+      </div>
+
       <div id="people">
-        <Heading link="" num="4" blurb="People" />
+        <Heading link="" num="5" blurb="People" />
         <Leadership leaders={atcon_people} />
       </div>
     </div>
