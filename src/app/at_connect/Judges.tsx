@@ -14,31 +14,17 @@ interface Judge {
 const judges: Judge[] = [
   {
     id: 1,
-    name: "Doraemon",
-    role: "Tech Innovation Lead",
-    bio: "Former CTO with 15+ years experience in AI and machine learning. Passionate about mentoring young entrepreneurs.",
-    imagePath: "/judges/doraemon.png"
+    name: "Derrick Fowles",
+    role: "Judge",
+    bio: "Derrick Fowles is a visionary leader and passionate advocate for diversity, inclusion, and equity, focusing on empowering individuals with disabilities. Pursuing his MBA, Derrick brings experience from his role as the Accessible Materials Coordinator in the student disability office, where he has showcased exceptional leadership by organizing large-scale events and implementing innovative solutions. His pursuit of the CPACC disability certification underscores his commitment to understanding diversity and inclusion. As a member of the GSA leadership at Virginia Tech, Derrick's unique experiences, strategic thinking skills, and dedication to promoting equal opportunities enable him to make a lasting, positive impact on the graduate population, fostering an inclusive environment where every student can thrive and reach their full potential.",
+    imagePath: "/judges/derrick-fowles.jpg"
   },
   {
     id: 2,
-    name: "C. George",
-    role: "Venture Capitalist",
-    bio: "Partner at Future Ventures, specializing in early-stage startups. Has backed multiple unicorn companies.",
-    imagePath: "/judges/george.webp"
-  },
-  {
-    id: 3,
-    name: "Ice Bear",
-    role: "Research Director",
-    bio: "Leading researcher in sustainable technology. Published author and frequent keynote speaker.",
-    imagePath: "/judges/ice-bear.png"
-  },
-  {
-    id: 4,
-    name: "Crayon Shin-Chan",
-    role: "Industry Expert",
-    bio: "20+ years experience in product development. Former VP of Product at major tech companies.",
-    imagePath: "/judges/shin-chan.jpg"
+    name: "Rachel Brady",
+    role: "Judge",
+    bio: "Rachel Brady, PT, DPT, MS is a physical therapist and assistant professor at the Georgetown University, Center for Child and Human Development (GUCCHD).  Dr. Brady is also the director of the Georgetown University Certificate in Early Intervention Program in the School of Continuing Studies. She has over 30 years of experience in inclusive early childhood and intervention services and over 20 years in interdisciplinary early childhood personnel training and related research. Dr. Brady has publications and presents in the areas of assistive technology, including and serving children with disabilities and complex needs in early educational settings, and training and education in early childhood intervention.",
+    imagePath: "/judges/rachel-brady.jpg"
   }
 ];
 
