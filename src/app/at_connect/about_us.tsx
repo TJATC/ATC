@@ -41,7 +41,7 @@ export default function AboutUs() {
             <h3 className="text-xl font-bold mb-2 text-black">BE A PART OF THE MAGIC</h3>
             <p className="text-sm md:text-base">
               We're here to deliver the dream and spread awareness to those in need. Whether you're a high school
-              team or a sponsor, come join us for the first-ever TJ Assistive Technology fair, coming February 2025!
+              team or a sponsor, come join us for the first-ever TJ Assistive Technology fair, coming April 6th, 2025!
             </p>
           </section>
         </div>
