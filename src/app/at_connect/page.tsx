@@ -10,9 +10,10 @@ import AboutUs from "./about_us";
 import SponsorsPage from "./Sponsors";
 import PrizesPage from "./Prizes";
 import JudgesPage from "./Judges";
+import FAQPage from "./FAQ";
 
 export default function About() {
-  const sections = ["About Us", "Sponsors", "Prizes", "Judges", "People"];
+  const sections = ["About Us", "Sponsors", "Prizes", "Judges", "People", "FAQ"];
   const [activeSection, setActiveSection] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -136,6 +137,11 @@ export default function About() {
       <div id="people">
         <Heading link="" num="5" blurb="People" />
         <Leadership leaders={atcon_people} />
+      </div>
+
+      <div id="faq">
+        <Heading link="" num="6" blurb="FAQ" />
+        <FAQPage />
       </div>
     </div>
   );
