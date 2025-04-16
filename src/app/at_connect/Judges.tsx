@@ -25,6 +25,13 @@ const judges: Judge[] = [
     role: "Judge",
     bio: "Rachel Brady, PT, DPT, MS is a physical therapist and assistant professor at the Georgetown University, Center for Child and Human Development (GUCCHD).  Dr. Brady is also the director of the Georgetown University Certificate in Early Intervention Program in the School of Continuing Studies. She has over 30 years of experience in inclusive early childhood and intervention services and over 20 years in interdisciplinary early childhood personnel training and related research. Dr. Brady has publications and presents in the areas of assistive technology, including and serving children with disabilities and complex needs in early educational settings, and training and education in early childhood intervention.",
     imagePath: "/judges/rachel-brady.jpg"
+  },
+  {
+    id: 3,
+    name: "Geoffrey P. Weber",
+    role: "Judge",
+    bio: "Geoffrey P. Weber, MEd, from George Mason University, is an Assistive Technology Coordinator at the Region 4 Training and Technical Assistance Center.",
+    imagePath: "/judges/geoffrey-weber.jpg"
   }
 ];
 
